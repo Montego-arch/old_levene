@@ -31,7 +31,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Purchase Order" : "public/js/po.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -95,13 +95,29 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Journal Entry": {
+		"before_naming": "old_levene.utils.before_naming"
+	},
+	"Purchase Order": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+	"Purchase Invoice": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+	"Sales Order": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+	"Sales Invoice": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+	"Purchase Receipt": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+	"Delivery Note": {
+		"on_update": "old_levene.utils.onupdate",
+	},
+}
 
 # Scheduled Tasks
 # ---------------
