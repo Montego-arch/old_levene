@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include old_levene *.css
+recursive-include old_levene *.csv
+recursive-include old_levene *.html
+recursive-include old_levene *.ico
+recursive-include old_levene *.js
+recursive-include old_levene *.json
+recursive-include old_levene *.md
+recursive-include old_levene *.png
+recursive-include old_levene *.py
+recursive-include old_levene *.svg
+recursive-include old_levene *.txt
+recursive-exclude old_levene *.pyc
